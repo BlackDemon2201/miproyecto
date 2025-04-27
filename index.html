@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Store</title>
+    <link rel="stylesheet" href="frontend/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- MENU DE NAVEGACION -->
+
+    <header class="technova-header">
+        <nav class="technova-navbar">
+          <!-- Logo -->
+          <div class="logo-container">
+            <a href="index.html" class="logo-link">
+              <img src="frontend/Imagenes/technova.png" alt="Logo" class="logo">
+              <span class="logo-text">TechNova</span>
+            </a>
+          </div>
+      
+          <!-- Categorías (Botón de menú desplegable) -->
+          <div class="categories-menu">
+            <button id="category-toggle" class="nav-btn">
+              <i class="fas fa-th-large"></i>
+              <span>Categorías</span>
+            </button>
+          </div>
+      
+          <!-- Buscador -->
+          <div class="search-container">
+            <input type="text" placeholder="Buscar..." class="search-input">
+            <button class="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+      
+          <!-- Acciones rápidas -->
+          <div class="actions-container">
+            <a href="#" class="nav-btn">
+              <i class="fas fa-user"></i>
+              <span>Cuenta</span>
+            </a>
+            <a href="#" class="nav-btn">
+              <i class="fas fa-heart"></i>
+              <span>Favoritos</span>
+            </a>
+            <a href="#" class="nav-btn">
+              <i class="fas fa-shopping-cart"></i>
+              <span>Carrito</span>
+            </a>
+          </div>
+      
+        <!-- Panel de Categorías -->
+        <aside class="category-panel" id="category-panel">
+          <button id="close-category" class="close-category">
+            <i class="fas fa-chevron-left"></i> Cerrar
+          </button>
+          <ul>
+            <li><a href="#"><i class="fas fa-laptop"></i> Laptops</a></li>
+            <li><a href="#"><i class="fas fa-mobile-alt"></i> Smartphones</a></li>
+            <li><a href="#"><i class="fas fa-cogs"></i> Componentes</a></li>
+            <li><a href="#"><i class="fas fa-desktop"></i> Computadoras</a></li>
+            <li><a href="#"><i class="fas fa-tv"></i> Monitores</a></li>
+            <li><a href="#"><i class="fas fa-network-wired"></i> Redes y Conectividad</a></li>
+            <li><a href="#"><i class="fas fa-headphones-alt"></i> Accesorios</a></li>
+            <li><a href="#"><i class="fas fa-microphone-alt"></i> Audio</a></li>
+            <li><a href="#"><i class="fas fa-chair"></i> Sillas</a></li>
+          </ul>
+        </aside>
+      </header>
+
+    <!-- Carrusel mas vendidos -->
+<section class="carousel-section">
+    <h2>Productos Más Vendidos</h2>
+    <p class="section-description">Descubre los productos más populares que nuestros clientes están amando.</p>
+    <div class="carousel-wrapper">
+        <button class="prev-btn" onclick="moveCarousel('prev', 'carousel1')">&#10094;</button>
+        <div class="carousel" id="carousel1">
+            <!-- Productos Más Vendidos -->
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/1.jpg" alt="Samsung Galaxy S23">
+                <p>Samsung Galaxy S23</p>
+                <span>$799.99</span>
+                <p>Smartphone de alto rendimiento con cámara avanzada.</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+                <button class="btn-buy-now">Comprar</button>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/2.jpg" alt="iPhone 14">
+                <p>iPhone 14</p>
+                <span>$799.99</span>
+                <p>Smartphone premium de Apple con cámara de 48 MP.</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+                <button class="btn-buy-now">Comprar</button>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/3.jpg" alt="Acer Predator Helios 300">
+                <p>Acer Predator Helios 300</p>
+                <span>$1,499.99</span>
+                <p>Potente laptop gamer con gráfica NVIDIA.</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+                <button class="btn-buy-now">Comprar</button>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/4.jpg" alt="Dell XPS 13">
+                <p>Dell XPS 13</p>
+                <span>$1,199.99</span>
+                <p>Laptop ultradelgada con una pantalla impresionante.</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+                <button class="btn-buy-now">Comprar</button>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/5.jpg" alt="Logitech G203">
+                <p>Logitech G203</p>
+                <span>$39.99</span>
+                <p>Raton gaming con sensor de alta precisión.</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+                <button class="btn-buy-now">Comprar</button>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/6.jpg" alt="Sony WH-1000XM4">
+                <p>Sony WH-1000XM4</p>
+                <span>$348.00</span>
+                <p>Auriculares inalámbricos con cancelación de ruido.</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+                <button class="btn-buy-now">Comprar</button>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/7.jpg" alt="Dell Inspiron 15">
+                <p>Dell Inspiron 15</p>
+                <span>$649.99</span>
+                <p>Laptop con procesador Intel Core i5 y pantalla FHD.</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+                <button class="btn-buy-now">Comprar</button>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/8.jpg" alt="JBL Quantum One">
+                <p>JBL Quantum One</p>
+                <span>$299.99</span>
+                <p>Audífonos gamer con sonido envolvente.</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+                <button class="btn-buy-now">Comprar</button>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/9.jpg" alt="MacBook Pro 16">
+                <p>MacBook Pro 16</p>
+                <span>$2,499.99</span>
+                <p>Laptop profesional de alto rendimiento con chip M1 Pro.</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+                <button class="btn-buy-now">Comprar</button>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/10.jpg" alt="Xbox Series X">
+                <p>Xbox Series X</p>
+                <span>$499.99</span>
+                <p>Consola de videojuegos de última generación.</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+                <button class="btn-buy-now">Comprar</button>
+            </div>
+            <!-- Añadir más productos -->
+        </div>
+        <button class="next-btn" onclick="moveCarousel('next', 'carousel1')">&#10095;</button>
+    </div>
+
+    <h2>Categorías</h2>
+    <div class="carousel-wrapper">
+        <button class="prev-btn" onclick="moveCarousel('prev', 'carousel2')">&#10094;</button>
+        <div class="carousel" id="carousel2">
+            <!-- Categorías -->
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/productos/1.png" alt="Categoría 1">
+                <p>Laptops</p>
+            </div>
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/productos/2.png" alt="Categoría 2">
+                <p>Smartphones</p>
+            </div>
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/productos/3.png" alt="Categoría 3">
+                <p>Componentes</p>
+            </div>
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/productos/4.png" alt="Categoría 4">
+                <p>Computadoras</p>
+            </div>
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/productos/5.png" alt="Categoría 5">
+                <p>Monitores</p>
+            </div>
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/productos/6.png" alt="Categoría 6">
+                <p>Redes y Conectividad</p>
+            </div>
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/productos/7.png" alt="Categoría 7">
+                <p>Accesorios</p>
+            </div>
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/productos/8.png" alt="Categoría 8">
+                <p>Audio</p>
+            </div>
+            <div class="carousel-item">
+                <img src="frontend/Imagenes/productos/9.png" alt="Categoría 9">
+                <p>Sillas</p>
+            </div>
+            <!-- Añadir más categorías -->
+        </div>
+        <button class="next-btn" onclick="moveCarousel('next', 'carousel2')">&#10095;</button>
+    </div>
+
+    <h2>Destacados al Menor Precio</h2>
+    <div class="carousel-wrapper">
+        <button class="prev-btn" onclick="moveCarousel('prev', 'carousel3')">&#10094;</button>
+        <div class="carousel" id="carousel3">
+            <!-- Productos Destacados -->
+            <div class="carousel-item"> 
+                <img src="frontend/Imagenes/productos/mouse.jpg" alt="Mouse inalámbrico Logitech M170">
+                <p>Mouse inalámbrico Logitech M170</p>
+                <span>S/ 89.99</span>
+                <p>Mouse ergonómico y fiable con conexión inalámbrica de 2.4 GHz. Ideal para oficina y uso doméstico.</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+                <button class="btn-buy-now">Comprar</button>
+            </div>
+            
+            <div class="carousel-item"> 
+                <img src="frontend/Imagenes/productos/teclado.jpg" alt="Teclado mecánico Redragon K552">
+                <p>Teclado mecánico Redragon K552</p>
+                <span>S/ 179.99</span>
+                <p>Teclado compacto con retroiluminación LED y switches mecánicos. Perfecto para gamers.</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+                <button class="btn-buy-now">Comprar</button>
+            </div>
+            
+            <div class="carousel-item"> 
+                <img src="frontend/Imagenes/productos/pendrive.jpg" alt="Pendrive Kingston 32GB">
+                <p>Pendrive Kingston 32GB</p>
+                <span>S/ 49.99</span>
+                <p>Almacenamiento portátil de alta velocidad para transferir archivos con facilidad.</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+                <button class="btn-buy-now">Comprar</button>
+            </div>
+            
+            <div class="carousel-item"> 
+                <img src="frontend/Imagenes/productos/cargador.jpg" alt="Cargador portátil Anker PowerCore 10000">
+                <p>Cargador portátil Anker PowerCore 10000</p>
+                <span>S/ 149.99</span>
+                <p>Capacidad de carga para múltiples dispositivos, compacto y eficiente para viajes.</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+                <button class="btn-buy-now">Comprar</button>
+            </div>
+            
+            <div class="carousel-item"> 
+                <img src="frontend/Imagenes/productos/raton.jpg" alt="Mouse Gamer Redragon Cobra">
+                <p>Mouse Gamer Redragon Cobra</p>
+                <span>S/ 139.99</span>
+                <p>Mouse con 6 botones programables, retroiluminación RGB y diseño ergonómico para juegos.</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+                <button class="btn-buy-now">Comprar</button>
+            </div>
+            <!-- Añadir más productos -->
+        </div>
+        <button class="next-btn" onclick="moveCarousel('next', 'carousel3')">&#10095;</button>
+    </div>
+</section>
+  
+
+    <!-- Metodos de pago -->
+
+    <section class="metodos-pago">
+        <div class="contenedor-pago">
+          <h2>Métodos de Pago</h2>
+          <p>Elige el método que mejor se adapte a ti. En TechNova Store te brindamos comodidad, seguridad y múltiples opciones.</p>
+          
+          <div class="tarjetas-pago">
+            <!-- Tarjeta 1 -->
+            <div class="tarjeta zoom">
+              <img src="frontend/Imagenes/metodospago/metodo1.png" alt="Tarjeta de Crédito">
+              <h3>Tarjeta de Crédito</h3>
+              <p>Pagos seguros y rápidos con tu tarjeta de crédito. Aceptamos Visa, Mastercard, Amex y más.</p>
+            </div>
+      
+            <!-- Tarjeta 2 -->
+            <div class="tarjeta zoom">
+              <img src="frontend/Imagenes/metodospago/metodo2.png" alt="Tarjeta de Débito">
+              <h3>Tarjeta de Débito</h3>
+              <p>Realiza pagos directamente desde tu cuenta bancaria de forma segura.</p>
+            </div>
+      
+            <!-- Tarjeta 3 -->
+            <div class="tarjeta zoom">
+              <img src="frontend/Imagenes/metodospago/metodo3.png" alt="Pago en Efectivo">
+              <h3>Pago en Efectivo</h3>
+              <p>Deposita en bancos autorizados o realiza transferencias usando banca por internet.</p>
+            </div>
+      
+            <!-- Tarjeta 4 -->
+            <div class="tarjeta zoom">
+              <img src="frontend/Imagenes/metodospago/metodo4.png" alt="Billeteras Digitales">
+              <h3>Billeteras Digitales</h3>
+              <p>Usa Yape, Plin o Agora para pagar desde tu celular escaneando un código QR.</p>
+            </div>
+      
+            <!-- Tarjeta 5 -->
+            <div class="tarjeta zoom">
+              <img src="frontend/Imagenes/metodospago/metodo5.png" alt="Cuotéalo">
+              <h3>Cuotéalo (BCP)</h3>
+              <p>Financia tu compra en cuotas sin tarjeta de crédito. Disponible para compras entre S/100 y S/7,000.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Pie de Pagina -->
+  
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Columna 1 -->
+          <div class="footer-column">
+            <h3>TechNova Store</h3>
+            <p>
+              Somos una tienda de productos tecnológicos de alta calidad con una
+              experiencia de compra omnicanal. ¡Gracias por confiar en nosotros!
+            </p>
+          </div>
+  
+          <!-- Columna 2 -->
+          <div class="footer-column">
+            <h3>Sobre Nosotros</h3>
+            <ul>
+              <li><a href="#">¿Quiénes Somos?</a></li>
+              <li><a href="#">Canales de Atención</a></li>
+              <li><a href="#">Métodos de Pago</a></li>
+              <li><a href="#">Nuestras Tiendas</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+  
+          <!-- Columna 3 -->
+          <div class="footer-column">
+            <h3>Redes Sociales</h3>
+            <ul>
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+              </li>
+            </ul>
+          </div>
+  
+          <!-- Columna 4 -->
+          <div class="footer-column">
+            <h3>Sobre Nosotros</h3>
+            <ul>
+              <li><a href="#">Políticas de privacidad</a></li>
+              <li><a href="#">Canales de Atención</a></li>
+              <li><a href="#">Metodos de Pago</a></li>
+              <li><a href="#">Nuestras Tiendas</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Pie inferior -->
+        <div class="footer-bottom">
+          <p>© 2025 TechNova Store - Todos los derechos reservados.</p>
+        </div>
+      </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
